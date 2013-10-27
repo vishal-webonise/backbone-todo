@@ -23,7 +23,7 @@ var TodoList = Backbone.Collection.extend({
   // Filter down the list to only todo items that are still not
   // finished.
   remaining: function(){
-    return this.without.apply( this, this.completed );
+    return this.without.apply( this, this.completed() );
   },
 
   // We keep the  todos in sequential order, despite being stored by
